@@ -954,7 +954,7 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
-.menu__body, .menu, .header {
+.banners__container, .banners__switchers > *, .top, .menu__body, .menu, .header {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -975,6 +975,7 @@ button.swiper-pagination-bullet {
 
 .header {
   grid-area: "header";
+  margin-bottom: 70px;
   grid-template: 1fr/1fr minmax(auto, 157.9px) minmax(auto, 959.1px) minmax(auto, 188px) 1fr;
 }
 .header__logo {
@@ -1107,4 +1108,126 @@ button.swiper-pagination-bullet {
 }
 .menu__link:hover {
   color: #d5621d;
+}
+
+main {
+  grid-area: "main";
+}
+main section {
+  margin-bottom: 130px;
+}
+main section:last-child {
+  margin-bottom: 0;
+}
+
+.top {
+  grid-template: 1fr/1fr minmax(auto, 856px) minmax(auto, 416px) 1fr;
+  gap: 24px;
+}
+.fontanka {
+  grid-column-start: 2;
+  height: 540px;
+  width: 856px;
+  background-size: cover;
+  display: grid;
+  justify-content: start;
+  align-content: end;
+  padding: 0 0 45px 60px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 20;
+}
+.fontanka img {
+  display: block;
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 120%;
+  height: 120%;
+}
+.fontanka__since {
+  padding: 10px 20px;
+  width: 154px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  font-family: gothampro;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.9px;
+  text-align: left;
+  color: #210e09;
+  text-transform: uppercase;
+}
+.fontanka__title {
+  font-family: gothampro_bold;
+  font-size: 40px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.banners {
+  grid-column-start: 3;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.banners__switchers {
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
+}
+.banners__switchers > * {
+  width: 208px;
+  height: 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.banners__switchers > *._active {
+  background-color: rgba(213, 98, 29, 0.1);
+}
+.banners__container {
+  display: none;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 160px));
+  gap: 25px;
+  width: 416px;
+  height: 502px;
+}
+.banners__container_soon .banners__banner {
+  width: 160px;
+  height: 200px;
+  background-color: #d5621d;
+}
+.banners__container._active {
+  display: grid;
+  background-color: rgba(213, 98, 29, 0.1);
+}
+.banners__banner {
+  display: block;
+  position: relative;
+}
+.banners__banner:after {
+  content: "";
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s ease 0s;
+}
+.banners__banner:hover:after {
+  background-color: #210e09;
 }
