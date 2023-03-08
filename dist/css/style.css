@@ -954,7 +954,7 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
-.banners__container, .banners__switchers > *, .top, .menu__body, .menu, .header {
+.description, .banners__container, .banners__switchers > *, .top, .menu__body, .menu, .header {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -1359,4 +1359,70 @@ main section:last-child {
   letter-spacing: 0.7px;
   text-align: center;
   color: #fff;
+}
+
+.description {
+  grid-template: 1fr/1fr minmax(auto, 376px) minmax(auto, 416px) minmax(auto, 376px) 1fr;
+  gap: 44px;
+}
+.description__events {
+  grid-column: 2/3;
+}
+.description__label {
+  height: 38px;
+  padding: 10px 20px;
+  font-family: gothampro_medium;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+  text-align: center;
+  color: #210e09;
+  text-transform: uppercase;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+.description__title {
+  margin-bottom: 35px;
+}
+.description__text {
+  font-family: stolzl_light;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 35px;
+}
+.description__further {
+  padding: 15px 30px;
+  width: 156px;
+  border-radius: 5px;
+  margin: 0 auto;
+  border: 1px solid #d5621d;
+  font-family: stolzl_medium;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+.description__further:hover {
+  background-color: #d5621d;
+}
+.description__photo {
+  grid-column: 3/4;
+}
+.description__tourists {
+  grid-column: 4/5;
 }
