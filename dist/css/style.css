@@ -1606,7 +1606,7 @@ main section:last-child {
 .list__row {
   padding: 0 50px;
   width: 416px;
-  height: 656px;
+  height: 100%;
   display: grid;
   grid-template: repeat(5, 1fr)/1fr;
   align-items: center;
@@ -1633,4 +1633,29 @@ main section:last-child {
   letter-spacing: normal;
   text-align: left;
   color: #fff;
+}
+.footer {
+  margin-top: 99px;
+  display: grid;
+  justify-items: start;
+  align-items: center;
+  grid-area: "footer";
+  grid-template: 51px/1fr minmax(auto, 1133px) minmax(auto, 163px) 1fr;
+}
+.footer__copyright, .footer__developers {
+  opacity: 0.5;
+  font-family: stolzl_thin;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+.footer__copyright {
+  grid-column: 2/3;
+}
+.footer__developers {
+  grid-column: 3/4;
 }
