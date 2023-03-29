@@ -994,6 +994,17 @@ button.swiper-pagination-bullet {
   padding: 15px;
 }
 
+.up {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  background: url("../img/arrow.png") no-repeat center center;
+  background-size: cover;
+  display: none;
+}
+
 .header {
   grid-area: "header";
   margin-bottom: 70px;
@@ -1026,7 +1037,7 @@ button.swiper-pagination-bullet {
   font-style: normal;
   line-height: 1.5;
   letter-spacing: 0.7px;
-  text-align: left;
+  text-align: center;
   color: #fff;
   text-transform: uppercase;
   border-radius: 5px;
@@ -1039,9 +1050,12 @@ button.swiper-pagination-bullet {
     margin-left: 50px;
   }
 }
-@media screen and (max-width: 434px) {
+@media screen and (max-width: 523px) {
   .header__booking {
-    padding: 7px 15px;
+    margin-left: 0;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 1px;
   }
 }
 @media screen and (max-width: 388px) {
@@ -1172,12 +1186,22 @@ button.swiper-pagination-bullet {
   color: #fff;
   text-transform: uppercase;
 }
+@media screen and (max-width: 523px) {
+  .popup__body {
+    width: 374px;
+  }
+}
 .popup__body input {
   height: 26px;
   text-align: left;
   font-size: 18px;
   border-radius: 5px;
   padding: 10px;
+}
+@media screen and (max-width: 523px) {
+  .popup__body input {
+    width: 150px;
+  }
 }
 .popup__body input[type=submit] {
   width: 150px;
@@ -1199,6 +1223,11 @@ form > div p:first-child {
   display: grid;
   justify-content: space-between;
   grid-template: 1fr/1fr 1fr;
+}
+@media screen and (max-width: 523px) {
+  form > div p:first-child {
+    width: 350px;
+  }
 }
 form > div p:last-child {
   height: 20px;
@@ -1232,6 +1261,11 @@ main section:last-child {
   text-align: center;
   color: #fff;
   text-transform: uppercase;
+}
+
+section {
+  opacity: 0;
+  transition: opacity 0.8s linear 0.3s;
 }
 
 .top {
@@ -1272,6 +1306,13 @@ main section:last-child {
     width: 100%;
   }
 }
+@media screen and (max-width: 523px) {
+  .fontanka {
+    justify-content: center;
+    align-content: center;
+    padding: 15px;
+  }
+}
 .fontanka__since {
   padding: 10px 20px;
   width: 154px;
@@ -1301,6 +1342,11 @@ main section:last-child {
   color: #fff;
   text-transform: uppercase;
 }
+@media screen and (max-width: 523px) {
+  .fontanka__title {
+    font-size: 30px;
+  }
+}
 
 .banners {
   grid-column-start: 3;
@@ -1319,12 +1365,22 @@ main section:last-child {
   grid-template: 1fr/1fr 1fr;
   width: 416px;
 }
+@media screen and (max-width: 523px) {
+  .banners__switchers {
+    width: 300px;
+  }
+}
 .banners__switchers > * {
   width: 208px;
   height: 40px;
   font-size: 14px;
   text-transform: uppercase;
   color: #fff;
+}
+@media screen and (max-width: 523px) {
+  .banners__switchers > * {
+    width: 172px;
+  }
 }
 .banners__switchers > *._active {
   background-color: rgba(213, 98, 29, 0.1);
@@ -1342,6 +1398,12 @@ main section:last-child {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+  }
+}
+@media screen and (max-width: 523px) {
+  .banners__container {
+    width: 344px;
+    gap: 10px;
   }
 }
 .banners__container_soon .banners__banner {
@@ -1403,6 +1465,11 @@ main section:last-child {
 @media screen and (max-width: 887px) {
   .swiper {
     width: 500px;
+  }
+}
+@media screen and (max-width: 523px) {
+  .swiper {
+    width: 320px;
   }
 }
 
@@ -1538,11 +1605,20 @@ main section:last-child {
     gap: 5px;
   }
 }
+@media screen and (max-width: 523px) {
+  .description {
+    grid-template: 1fr 1fr/1fr;
+  }
+}
 .description__events {
   grid-column: 2/3;
 }
+@media screen and (max-width: 523px) {
+  .description__events {
+    grid-column: 1/2;
+  }
+}
 .description__label {
-  height: 38px;
   padding: 10px 20px;
   font-family: gothampro_medium;
   border-radius: 5px;
@@ -1610,6 +1686,12 @@ main section:last-child {
     grid-column: 3/4;
   }
 }
+@media screen and (max-width: 523px) {
+  .description__tourists {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
 
 .rider__title {
   margin-bottom: 80px;
@@ -1642,6 +1724,7 @@ main section:last-child {
   grid-column: 2/3;
   display: grid;
   grid-template: repeat(6, minmax(67px, auto))/1fr;
+  align-content: start;
   gap: 20px;
 }
 .blocks__block {
@@ -1750,11 +1833,21 @@ main section:last-child {
   text-transform: uppercase;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 523px) {
+  .sound__title {
+    font-size: 18px;
+  }
+}
 .sound__row {
   display: grid;
   justify-content: center;
   grid-template: 1fr/minmax(auto, 196px) minmax(auto, 196px);
   gap: 24px;
+}
+@media screen and (max-width: 523px) {
+  .sound__row {
+    grid-template: 1fr 1fr/1fr;
+  }
 }
 .sound__left, .sound__right {
   display: grid;
@@ -1885,6 +1978,11 @@ main section:last-child {
   .list__row {
     grid-template: repeat(3, 1fr)/repeat(2, 1fr);
     gap: 10px;
+  }
+}
+@media screen and (max-width: 523px) {
+  .list__row {
+    padding: 0 5px;
   }
 }
 .list__title {
